@@ -119,6 +119,12 @@ line.
 grep -c "text" file_name
 ```
 
+搜索命令行历史记录中 输入过 `git` 命令的记录：
+
+```shell
+history | grep git
+```
+
 输出包含匹配字符串的行数  **-n**  选项：
 
 ```shell
@@ -164,6 +170,7 @@ echo "hello world" | grep -i "HELLO"
 
 ```shell
 echo this is a text line | grep -e "is" -e "line" -o
+is
 is
 line
 
@@ -246,4 +253,4 @@ b
 ```
 
 
-<!-- Linux命令行搜索引擎：https://jaywcjlove.github.io/linux-command/ -->
+
