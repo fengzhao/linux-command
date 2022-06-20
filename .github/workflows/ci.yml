@@ -56,7 +56,7 @@ jobs:
       id: changelog
       uses: jaywcjlove/changelog-generator@v1.5.3
       with:
-        filter-author: (小弟调调™)
+        filter-author: (fengzhao)
         filter: (^[\s]+?[R|r]elease)|(^[R|r]elease)
 
     - name: Create Release
@@ -134,10 +134,10 @@ jobs:
       run: echo ${{ github.token }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Build docker image
-      run: docker build -t ghcr.io/jaywcjlove/linux-command:latest .
+      run: docker build -t ghcr.io/fengzhao/linux-command:latest .
 
     - name: Publish to GitHub registry
-      run: docker push ghcr.io/jaywcjlove/linux-command:latest
+      run: docker push ghcr.io/fengzhao/linux-command:latest
 
 
     - name: Tag docker image (beta) and publish to GitHub registry
